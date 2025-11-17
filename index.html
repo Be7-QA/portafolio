@@ -1,11 +1,298 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi portafolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio – QA Engineer</title>
+
+  <!-- Fuente opcional -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+      display: flex;
+      gap: 32px;
+    }
+
+    /* Columna izquierda */
+    aside { flex: 0 0 280px; }
+
+    .profile-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px 24px 28px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      object-fit: cover;
+      margin-bottom: 18px;
+      background: #00c7b3; /* fondo verde mientras no haya foto */
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .small-text {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .primary-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid #0366d6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0366d6;
+    }
+
+    /* Columna derecha */
+    main { flex: 1; }
+
+    .top-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px 24px 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 18px;
+    }
+
+    .top-title { font-size: 2rem; margin-bottom: 4px; }
+
+    .role-line {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #444;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 18px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: default;
+    }
+
+    .chip--email { background: #f44336; color: #fff; }
+    .chip--secondary { background: #333; color: #fff; }
+
+    .chip-label { font-weight: 700; }
+    .chip-value { font-weight: 600; }
+
+    .chip-link { text-decoration: none; color: inherit; }
+
+    .section-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-top: 18px;
+    }
+
+    h2 { font-size: 1.4rem; margin-bottom: 12px; }
+
+    .index-list {
+      margin-left: 20px;
+      font-size: 0.95rem;
+      display: grid;
+      gap: 4px;
+    }
+
+    .index-list a {
+      text-decoration: none;
+      color: #0366d6;
+    }
+
+    .index-list a:hover { text-decoration: underline; }
+
+    section { margin-top: 28px; }
+
+    section h3 { font-size: 1.2rem; margin-bottom: 10px; }
+
+    section p {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    ul { margin-left: 18px; font-size: 0.95rem; }
+    ul li { margin-bottom: 4px; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 18px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    @media (max-width: 800px) {
+      .page { flex-direction: column; }
+      aside { flex: 1 1 auto; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola, este es mi portafolio</h1>
-  <p>Prueba inicial con GitHub Pages.</p>
+
+<div class="page">
+  <!-- Columna izquierda -->
+  <aside>
+    <div class="profile-card">
+      <!-- Cuando subas tu foto, cámbialo por <img src="mi-foto.jpg" class="profile-image"> -->
+      <div class="profile-image"></div>
+
+      <h1>Tu Nombre<br>Tu Apellido</h1>
+
+      <p class="small-text">
+        Bienvenido/a a mi portafolio de proyectos como QA Engineer.
+      </p>
+
+      <a class="primary-link" href="https://github.com/Be7-QA" target="_blank">
+        Ver mi perfil de GitHub
+      </a>
+    </div>
+  </aside>
+
+  <!-- Columna derecha -->
+  <main>
+    <div class="top-card">
+      <h2 class="top-title">👋 Bienvenido/a a mi portafolio</h2>
+      <p class="role-line">
+        QA ENGINEER · QA MANUAL TESTER · QA DOCUMENTADOR · QA AUTOMATIZADOR JUNIOR
+      </p>
+
+      <div class="contact-row">
+        <div class="chip chip--email">
+          <span class="chip-label">GMAIL</span>
+          <span class="chip-value">tucorreo@gmail.com</span>
+        </div>
+
+        <a class="chip chip--secondary chip-link" href="https://www.linkedin.com" target="_blank">
+          <span class="chip-label">LINKEDIN</span>
+          <span class="chip-value">PERFIL</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2>📋 Índice</h2>
+      <ol class="index-list">
+        <li><a href="#sobre-mi">🚀 Sobre mí</a></li>
+        <li><a href="#tech-stack">🛠️ Tech Stack</a></li>
+        <li><a href="#proyectos">📂 Proyectos Destacados</a></li>
+        <li><a href="#cv">📄 CV Profesional</a></li>
+        <li><a href="#contacto">📬 ¿Hablemos?</a></li>
+      </ol>
+
+      <section id="sobre-mi">
+        <hr>
+        <h3>🚀 Sobre mí</h3>
+        <p>
+          Soy QA con experiencia en <strong>pruebas manuales</strong> y 
+          <strong>automatizadas</strong>, manejo de herramientas como 
+          <strong>Selenium, Postman y JIRA</strong>, y conocimientos en SQL 
+          y documentación.
+        </p>
+        <p>
+          Me gusta mejorar la calidad del software, colaborar con equipos ágiles
+          y optimizar procesos de prueba.
+        </p>
+        <p>Además, cuento con experiencia en:</p>
+        <ul>
+          <li>✍️ Redacción de planes de prueba, historias de usuario y casos de uso.</li>
+          <li>🧪 Diseño y ejecución de casos de prueba funcionales y de regresión.</li>
+          <li>📊 Reporte y seguimiento de defectos, métricas y resultados.</li>
+        </ul>
+      </section>
+
+      <section id="tech-stack">
+        <hr>
+        <h3>🛠️ Tech Stack</h3>
+        <p><strong>Lenguajes:</strong> SQL, JavaScript (básico), Python (básico)</p>
+        <p><strong>Herramientas QA:</strong> Selenium, Postman, JIRA, TestRail</p>
+        <p><strong>Otros:</strong> Git, GitHub, Scrum</p>
+      </section>
+
+      <section id="proyectos">
+        <hr>
+        <h3>📂 Proyectos Destacados</h3>
+        <ul>
+          <li><strong>Automatización de pruebas de login</strong> – Selenium + Java.</li>
+          <li><strong>API Testing</strong> – Colecciones en Postman para un e-commerce.</li>
+          <li><strong>Diseño de plan de pruebas</strong> – Sistema contable interno.</li>
+        </ul>
+      </section>
+
+      <section id="cv">
+        <hr>
+        <h3>📄 CV Profesional</h3>
+        <p>
+          Puedes ver o descargar mi CV desde este enlace:
+          <a href="TU_ENLACE_A_CV" target="_blank">Ver CV</a>.
+        </p>
+      </section>
+
+      <section id="contacto">
+        <hr>
+        <h3>📬 ¿Hablemos?</h3>
+        <p>
+          Si te interesa mi perfil o quieres que colaboremos en un proyecto, 
+          puedes escribirme a <strong>tucorreo@gmail.com</strong> o por 
+          <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      Hosted on GitHub Pages — Portafolio de Tu Nombre
+    </footer>
+  </main>
+</div>
+
 </body>
 </html>
